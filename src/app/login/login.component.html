@@ -1,6 +1,11 @@
 <div>
   <form #formRef="ngForm" (ngSubmit)="onSubmit(formRef.value)">
-  <input [(ngModel)]="username" type="text" required name="username" #usernameRef="ngModel" minlength="3">
+  <input [(ngModel)]="username" type="text" required 
+         name="username" #usernameRef="ngModel" minlength="3"
+         class="ng-dirty ng-valid ng-touched"
+         ng-reflect-model="ssddsds"
+         ng-reflect-minlenght="3"
+         ng-reflect-name="username">
   {{usernameRef.valid}}
   {{usernameRef.errors | json}}
   <div *ngIf="usernameRef.errors?.required">
